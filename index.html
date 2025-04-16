@@ -9,8 +9,21 @@
     />
     <title>Team Dog Meeting Minutes</title>
     <link rel="shortcut icon" href="favicon-dog.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        background-color: #f0f8ff;
+      }
+      main:has(section#feedback) {
+        border: 3px dashed var(--primary-color, red);
+      }
+    </style>
   </head>
-  <body>
+  <body style="font-family: 'Roboto', sans-serif">
     <header>
       <h1>Team Dog Meeting Minutes</h1>
       <h2>Date: April 15, 2025</h2>
@@ -31,10 +44,10 @@
       <section id="attendance">
         <h3>Attendance</h3>
         <ul>
-          <li>Buddy</li>
-          <li>Max</li>
-          <li>Bella</li>
-          <li>Luna</li>
+          <li class="attendee">Buddy</li>
+          <li class="attendee">Max</li>
+          <li class="attendee">Bella</li>
+          <li class="attendee">Luna</li>
         </ul>
         <p>
           <strong>Note:</strong>
@@ -105,7 +118,8 @@
 
       <section id="multimedia">
         <h3>Multimedia</h3>
-        <div>
+        <br />
+        <div class="media-container">
           <p>Dog Park Layout &amp; Play Diagram:</p>
           <img
             src="dog-park.jpg"
@@ -113,14 +127,14 @@
             width="400"
           />
         </div>
-        <div>
+        <div class="media-container">
           <p>Audio Recording of Barking Updates:</p>
           <audio controls>
             <source src="dog-barking.mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
-        <div>
+        <div class="media-container">
           <p>Video of the Daily Dog Walk:</p>
           <video controls width="400">
             <source src="dog-walk.mp4" type="video/mp4" />
@@ -136,43 +150,39 @@
         <form action="#" method="post">
           <fieldset>
             <legend>Feedback Form for the Pack</legend>
-
             <label for="name">Your Name (Pawprint):</label>
             <input id="name" name="name" type="text" required />
             <br /><br />
-
             <label for="newsletter">Subscribe to our Doggo Newsletter:</label>
             <input id="newsletter" name="subscribe" type="checkbox" />
             <br /><br />
-
             <p>How was the meeting?</p>
+            <label for="howling">Howling Excellent</label>
             <input
               type="radio"
               id="howling"
               name="meetingRating"
               value="howling"
             />
-            <label for="howling">Howling Excellent</label>
+            <label for="barking">Barking Good</label>
             <input
               type="radio"
               id="barking"
               name="meetingRating"
               value="barking"
             />
-            <label for="barking">Barking Good</label>
+            <label for="whimpering">Whimpering Needs Improvement</label>
             <input
               type="radio"
               id="whimpering"
               name="meetingRating"
               value="whimpering"
             />
-            <label for="whimpering">Whimpering Needs Improvement</label>
-            <br /><br />
 
+            <br /><br />
             <label for="meeting-date">Meeting Date:</label>
             <input id="meeting-date" name="meeting-date" type="date" />
             <br /><br />
-
             <label for="comment-textarea">Additional Comments:</label>
             <textarea
               id="comment-textarea"
@@ -181,7 +191,6 @@
               cols="50"
             ></textarea>
             <br /><br />
-
             <label for="breed">Choose Your Breed:</label>
             <input list="breeds" id="breed" name="breed" />
             <datalist id="breeds">
@@ -191,7 +200,6 @@
               <option value="German Shepherd"></option>
             </datalist>
             <br /><br />
-
             <label for="satisfaction">Overall Satisfaction:</label>
             <select id="satisfaction" name="satisfaction">
               <option value="tail-wagging">Tail-Wagging Happy</option>
@@ -199,7 +207,6 @@
               <option value="ruff">Ruff Day</option>
             </select>
             <br /><br />
-
             <button type="submit">Submit Feedback</button>
           </fieldset>
         </form>

@@ -1,0 +1,455 @@
+/* CSS Variables */
+:root {
+  --primary-color: #4169e1; /* Royal Blue */
+  --secondary-color: rgba(
+    60,
+    179,
+    113,
+    0.8
+  ); /* Medium Sea Green with transparency */
+  --accent-color: #ff8c00; /* Dark Orange */
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --base-font-size: 16px;
+}
+
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg, #fff);
+  color: var(--text-color, #000);
+  padding-bottom: 60px; /* Space for fixed footer */
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+/* Wider-gamut color example */
+header {
+  background-color: color(display-p3 0.8 0.9 1);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+}
+
+/* Color-mix example */
+footer {
+  background-color: color-mix(in srgb, var(--primary-color) 30%, white);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Class Selector */
+.attendee {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  padding: 0.25em 0;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+  border: 2px solid var(--primary-color, blue);
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Required attribute selector */
+input[required] {
+  border-left: 4px solid var(--accent-color);
+}
+
+/* ID Selector */
+#attendance {
+  background-color: hsl(210, 50%, 95%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Pseudo-class Selector */
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Selector List */
+h1,
+h2,
+h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color, #333);
+}
+
+/* Descendant Combinator */
+section p {
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+/* Child Combinator */
+ul > li {
+  list-style: none;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Adjacent sibling combinator */
+h1 + h2 {
+  font-weight: normal;
+  color: #555;
+  font-style: italic;
+}
+
+/* General sibling combinator */
+hr ~ section {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+/* Combining Two Selectors */
+div.media-container {
+  margin: 1rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Box Model - Margin (longhand) */
+#agenda {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: rgba(240, 248, 255, 0.6);
+  border-radius: 8px;
+}
+
+/* Box Model - Margin (shorthand) */
+#comments {
+  margin: 2rem 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Box Model - Padding (longhand) */
+#unfinished {
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  background-color: rgba(240, 255, 240, 0.6);
+  border-radius: 8px;
+}
+
+/* Box Model - Padding (shorthand) */
+#new-business {
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 250, 240, 0.6);
+  border-radius: 8px;
+}
+
+/* Box Model - Border (longhand) */
+#feedback fieldset {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--primary-color, green);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background-color: white;
+}
+
+/* Box Model - Border (shorthand) */
+legend {
+  border: 2px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Text styling */
+p {
+  text-align: justify;
+  text-decoration: none;
+  font-size: var(--base-font-size);
+  color: #444;
+}
+
+/* Display property */
+header nav ul {
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+/* Header links */
+header nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Sizing properties */
+img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+audio,
+video {
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem 0;
+}
+
+/* Position property */
+header {
+  position: relative;
+}
+
+summary {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Flexbox layout */
+section#new-business {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+section#new-business p {
+  flex-basis: 100%;
+}
+
+section#new-business ul {
+  flex: 1;
+  min-width: 300px;
+}
+
+section#multimedia {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+section#multimedia .media-container {
+  width: 100%;
+}
+
+/* Form elements styling */
+form label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Adjacent sibling combinator */
+label + input {
+  margin-left: 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color, #ccc);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  body {
+    width: 95%;
+    padding-bottom: 80px;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  header nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  section#multimedia {
+    grid-template-columns: 1fr;
+  }
+
+  section#new-business {
+    flex-direction: column;
+  }
+
+  input,
+  textarea,
+  select {
+    max-width: 100%;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
+
+/* :has() selector */
+main:has(section#feedback) {
+  border: 3px dashed var(--primary-color, red);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Nested selector */
+@nest section#agenda, section#unfinished {
+  background-color: #e0f7fa;
+  padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply animation */
+header,
+footer,
+section {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Additional units examples */
+details {
+  width: 90vw;
+  margin: 2vh auto;
+  padding: 1.5rem;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0.5in;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5cm;
+}
+
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+/* Ensure form elements don't break layout */
+fieldset {
+  padding: 15px;
+  margin: 15px 0;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
