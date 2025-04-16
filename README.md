@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3
 
-URL: https://hskl18.github.io/Lab2_Starter/
+URL: https://hskl18.github.io/sp25-cse110-lab3/
