@@ -6,47 +6,44 @@
 
 ## Attendees
 
-- [ ] Team Member 1
-- [ ] Team Member 2
-- [ ] Team Member 3
-- [ ] (Add additional names as needed)
+- Team Member 1
+- Team Member 2
+- *(Add additional names as needed)*
 
 ---
 
-## What was completed yesterday?
+## What Was Completed Yesterday?
 
-- **Task/Issue:** Brief description of what was done.
-  - Example: _Finished styling the meeting minutes page with external CSS and inline styles._
-- **Task/Issue:** Another completed task.
-  - Example: _Fixed minor layout bugs in the responsive design._
+- **Task/Issue:** *Brief description of what was done.*
 
-_Add more points as needed._
-
----
-
-## What will be worked on today?
-
-- **Task/Issue:** Brief description of the planned work.
-  - Example: _Start implementing the CSS Grid layout for the meetings section._
-- **Task/Issue:** Another task planned.
-  - Example: _Review feedback on the recent pull request and incorporate necessary changes._
-
-_Add more points as needed._
+- **Task/Issue:** *Another completed task.*
+  
+- *(Add more points as needed)*
 
 ---
 
-## Any blockers or issues?
+## What Will Be Worked on Today?
 
-- **Blocker:** Describe any impediments.
-  - Example: _Struggling with resolving a CSS specificity conflict._
-- **Blocker:** Additional issues if any.
-  - Example: _Awaiting feedback on the new issue template design._
+- **Task/Issue:** *Brief description of the planned work.*
+ 
+- **Task/Issue:** *Another task planned.*
 
-_Add more points as needed._
+- *(Add more points as needed)*
+
+---
+
+## Any Blockers or Issues?
+
+- **Blocker:** *Describe any impediments.*
+
+- **Blocker:** *Additional issues if any.*
+
+- *(Add more points as needed)*
 
 ---
 
 ## Additional Notes
 
-- Any other relevant information or comments.
-  - Example: _Remember to check the Atlassian guide on Agile standups for additional context._
+Any other relevant information or comments:
+
+
