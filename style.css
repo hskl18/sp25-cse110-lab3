@@ -1,40 +1,31 @@
-/* CSS Variables */
 :root {
-  --primary-color: #4169e1; /* Royal Blue */
-  --secondary-color: rgba(
-    60,
-    179,
-    113,
-    0.8
-  ); /* Medium Sea Green with transparency */
-  --accent-color: #ff8c00; /* Dark Orange */
+  --primary-color: #4169e1;
+  --secondary-color: rgba(60, 179, 113, 0.8);
+  --accent-color: #ff8c00;
   --text-color: #333;
   --light-bg: #f8f9fa;
   --base-font-size: 16px;
 }
 
-/* Universal Selector */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Element Selector */
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background-color: var(--light-bg, #fff);
   color: var(--text-color, #000);
-  padding-bottom: 60px; /* Space for fixed footer */
+  padding-bottom: 60px;
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
 }
 
-/* Wider-gamut color example */
 header {
-  background-color: color(display-p3 0.8 0.9 1);
+  background-color: rgb(204, 230, 255);
   text-align: center;
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -42,9 +33,8 @@ header {
   border-radius: 0 0 10px 10px;
 }
 
-/* Color-mix example */
 footer {
-  background-color: color-mix(in srgb, var(--primary-color) 30%, white);
+  background-color: rgb(198, 210, 246);
   text-align: center;
   padding: 1rem;
   position: fixed;
@@ -54,14 +44,12 @@ footer {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Class Selector */
 .attendee {
   font-size: 1.1rem;
   color: var(--primary-color);
   padding: 0.25em 0;
 }
 
-/* Attribute Selector */
 input[type="text"] {
   border: 2px solid var(--primary-color, blue);
   padding: 0.5rem;
@@ -70,12 +58,10 @@ input[type="text"] {
   max-width: 300px;
 }
 
-/* Required attribute selector */
 input[required] {
   border-left: 4px solid var(--accent-color);
 }
 
-/* ID Selector */
 #attendance {
   background-color: hsl(210, 50%, 95%);
   padding: 1.5rem;
@@ -83,7 +69,6 @@ input[required] {
   margin-bottom: 1.5rem;
 }
 
-/* Pseudo-class Selector */
 a:hover {
   text-decoration: underline;
   color: var(--accent-color);
@@ -93,7 +78,6 @@ button:active {
   transform: translateY(2px);
 }
 
-/* Selector List */
 h1,
 h2,
 h3 {
@@ -101,33 +85,28 @@ h3 {
   color: var(--primary-color, #333);
 }
 
-/* Descendant Combinator */
 section p {
   margin: 1rem 0;
   line-height: 1.8;
 }
 
-/* Child Combinator */
 ul > li {
   list-style: none;
   padding: 0.5rem;
   margin-bottom: 0.25rem;
 }
 
-/* Adjacent sibling combinator */
 h1 + h2 {
   font-weight: normal;
   color: #555;
   font-style: italic;
 }
 
-/* General sibling combinator */
 hr ~ section {
   border-top: 1px solid #eee;
   padding-top: 1rem;
 }
 
-/* Combining Two Selectors */
 div.media-container {
   margin: 1rem auto;
   max-width: 600px;
@@ -138,7 +117,6 @@ div.media-container {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Box Model - Margin (longhand) */
 #agenda {
   margin-top: 20px;
   margin-right: 20px;
@@ -148,14 +126,12 @@ div.media-container {
   border-radius: 8px;
 }
 
-/* Box Model - Margin (shorthand) */
 #comments {
   margin: 2rem 1.5rem;
   background-color: #f9f9f9;
   border-radius: 8px;
 }
 
-/* Box Model - Padding (longhand) */
 #unfinished {
   padding-top: 15px;
   padding-right: 20px;
@@ -165,14 +141,12 @@ div.media-container {
   border-radius: 8px;
 }
 
-/* Box Model - Padding (shorthand) */
 #new-business {
   padding: 1.5rem 2rem;
   background-color: rgba(255, 250, 240, 0.6);
   border-radius: 8px;
 }
 
-/* Box Model - Border (longhand) */
 #feedback fieldset {
   border-width: 2px;
   border-style: solid;
@@ -183,7 +157,6 @@ div.media-container {
   background-color: white;
 }
 
-/* Box Model - Border (shorthand) */
 legend {
   border: 2px solid var(--accent-color);
   padding: 0.5rem 1rem;
@@ -193,7 +166,6 @@ legend {
   color: var(--primary-color);
 }
 
-/* Text styling */
 p {
   text-align: justify;
   text-decoration: none;
@@ -201,7 +173,6 @@ p {
   color: #444;
 }
 
-/* Display property */
 header nav ul {
   display: inline-block;
   margin: 1rem 0;
@@ -212,7 +183,6 @@ header nav ul li {
   margin: 0 0.5rem;
 }
 
-/* Header links */
 header nav ul li a {
   text-decoration: none;
   color: var(--primary-color);
@@ -227,7 +197,6 @@ header nav ul li a:hover {
   color: white;
 }
 
-/* Sizing properties */
 img {
   width: 100%;
   max-width: 400px;
@@ -243,7 +212,6 @@ video {
   margin: 1rem 0;
 }
 
-/* Position property */
 header {
   position: relative;
 }
@@ -259,7 +227,6 @@ summary {
   font-weight: bold;
 }
 
-/* Flexbox layout */
 section#new-business {
   display: flex;
   flex-direction: row;
@@ -292,7 +259,6 @@ section#multimedia .media-container {
   width: 100%;
 }
 
-/* Form elements styling */
 form label {
   display: block;
   margin: 0.5rem 0;
@@ -311,7 +277,6 @@ select {
   max-width: 400px;
 }
 
-/* Adjacent sibling combinator */
 label + input {
   margin-left: 0;
 }
@@ -331,31 +296,25 @@ button:hover {
   background-color: var(--secondary-color, #ccc);
 }
 
-/* Media query for responsiveness */
 @media (max-width: 768px) {
   body {
     width: 95%;
     padding-bottom: 80px;
   }
-
   header nav ul {
     display: block;
     text-align: center;
   }
-
   header nav ul li {
     display: block;
     margin: 0.5rem 0;
   }
-
   section#multimedia {
     grid-template-columns: 1fr;
   }
-
   section#new-business {
     flex-direction: column;
   }
-
   input,
   textarea,
   select {
@@ -363,35 +322,30 @@ button:hover {
   }
 }
 
-/* Media query for very small screens */
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5rem;
   }
-
   h2 {
     font-size: 1.2rem;
   }
-
   section {
     padding: 1rem;
   }
 }
 
-/* :has() selector */
 main:has(section#feedback) {
   border: 3px dashed var(--primary-color, red);
   padding: 1rem;
   margin-bottom: 2rem;
 }
 
-/* Nested selector */
-@nest section#agenda, section#unfinished {
+section#agenda,
+section#unfinished {
   background-color: #e0f7fa;
   padding: 20px;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -401,14 +355,12 @@ main:has(section#feedback) {
   }
 }
 
-/* Apply animation */
 header,
 footer,
 section {
   animation: fadeIn 1s ease-in;
 }
 
-/* Additional units examples */
 details {
   width: 90vw;
   margin: 2vh auto;
@@ -438,7 +390,6 @@ hr {
   background-color: #ddd;
 }
 
-/* Ensure form elements don't break layout */
 fieldset {
   padding: 15px;
   margin: 15px 0;
